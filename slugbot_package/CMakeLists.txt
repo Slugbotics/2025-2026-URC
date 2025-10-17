@@ -65,6 +65,7 @@ install(DIRECTORY
   launch
   resource
   worlds
+  protos
   DESTINATION share/${PROJECT_NAME}/
 )
 ament_export_include_directories(
