@@ -1,6 +1,6 @@
 #include "slugbot_package/ObstacleAvoider.hpp"
 
-#define MAX_RANGE 0.15
+#define MAX_RANGE 0.5
 
 ObstacleAvoider::ObstacleAvoider() : Node("obstacle_avoider") {
   publisher_ = create_publisher<geometry_msgs::msg::Twist>("/cmd_vel_avoid", 1);

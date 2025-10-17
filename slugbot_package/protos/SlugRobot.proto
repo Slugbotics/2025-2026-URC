@@ -1248,6 +1248,50 @@ PROTO SlugRobot [
           }
         }
       }
+      DEF DS_RIGHT DistanceSensor {
+        translation 0.1 -0.03 -.15
+        rotation 0 0 1 -0.3
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.184314 0.596078 0.847059
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.01 0.01 0.01
+            }
+          }
+        ]
+        name "ds_right"
+        lookupTable [
+          0 1020 0
+          0.5 1020 0
+          1.5 0 0
+        ]
+      }
+      DEF DS_LEFT DistanceSensor {
+        translation 0.1 0.03 -.15
+        rotation 0 0 1 0.3
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.184314 0.596078 0.847059
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.01 0.01 0.01
+            }
+          }
+        ]
+        name "ds_left"
+        lookupTable [
+          0 1020 0
+          0.5 1020 0
+          1.5 0 0
+        ]
+      }
     ]
     boundingObject Group {
       children [
