@@ -24,11 +24,11 @@ private:
   geometry_msgs::msg::Twist cmd_vel_msg_avoid;
   geometry_msgs::msg::Twist cmd_vel_msg_input;
 
-  WbDeviceTag right_motors[2];
+  WbDeviceTag right_motors[3];
   WbDeviceTag *right_side;
 
+  WbDeviceTag left_motors[3];
   WbDeviceTag *left_side;
-  WbDeviceTag left_motors[2];
 };
 } // namespace slugbot_driver
 #endif

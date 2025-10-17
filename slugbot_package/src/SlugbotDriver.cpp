@@ -8,7 +8,7 @@
 
 #define HALF_DISTANCE_BETWEEN_WHEELS 0.045
 #define WHEEL_RADIUS 0.025
-#define WHEEL_COUNT 4
+#define WHEEL_COUNT 6
 
 void set_position(WbDeviceTag *side, float value);
 void set_velocity(WbDeviceTag *side, float value);
@@ -18,12 +18,14 @@ void SlugbotDriver::init(
     webots_ros2_driver::WebotsNode *node,
     std::unordered_map<std::string, std::string> &parameters) {
 
-  left_motors[0] = wb_robot_get_device("wheel1");
-  left_motors[1] = wb_robot_get_device("wheel3");
+  left_motors[0] = wb_robot_get_device("FrontLeftWheel");
+  left_motors[1] = wb_robot_get_device("MiddleLeftWheel");
+  left_motors[2] = wb_robot_get_device("BackLeftWheel");
   left_side = left_motors;
 
-  right_motors[0] = wb_robot_get_device("wheel2");
-  right_motors[1] = wb_robot_get_device("wheel4");
+  right_motors[0] = wb_robot_get_device("FrontRightWheel");
+  right_motors[1] = wb_robot_get_device("MiddleRightWheel");
+  right_motors[2] = wb_robot_get_device("BackRightWheel");
   right_side = right_motors;
 
   set_position(left_side, INFINITY);
